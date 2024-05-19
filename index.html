@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="file-button" id="draggable-button">
+        <button class="file" id="folder">
+            <img src="File .png" alt="">
+            <h6>Archive</h6>
+        </button>
+    </div>
+    <!-- FILE BUTTON TO OPPEN FINDER WINDOW  -->   
+    <div class="window hidden" id="window">
+        <div class="title-bar">
+            <div class="title-bar-controls">
+                <button title="close window" class="title-bar-control red" id="close"></button>
+                <button title="minimize window" class="title-bar-control yellow"></button>
+                <button title="maximize window" class="title-bar-control green"></button>
+                <div class="title-bar-title">Archive</div>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="findertoolbar">
+                <div class="flex">
+                    <button class="prevnext" id="prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class="small">
+                            <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"></path>
+                        </svg>  
+                    </button>
+                    <button class="prevnext" id="next">    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24" class="small">
+                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"></path>
+                    </svg></button>
+                    <div class="toolbar-text"></div>
+                </div>
+            </div>
+            <!--FINDER WINDOW PANELS -->
+            <div class="finderpanels">
+                <div class="finderpanel">
+                    <div class="sidepanel">
+                        <button class="sidebaritem 1" id="SB1">
+                            <div class="title">Virgil Abloh</div>
+                            <div class="label">3</div>
+                        </button>
+                        <button class="sidebaritem 2" id="SB2">
+                            <div class="title">Paul Pogba</div>
+                            <div class="label">4</div>
+                        </button>
+                    </div>
+                    
+                    <!-- MIDDLE FINDER PANEL VIRGIL-->
+                    <div class="middlepanel1 hidden" id="middlepanel1">
+                        <button class="middlepanelitem" id="middlepanelH-W">
+                            <div class="imgicon">
+                                <img src="Imgicon.png" alt="">
+                            </div>
+                            <div class="filename">"Hardware".png</div>
+                            <svg data-v-00be80db="" width="9" height="11" xmlns="http://www.w3.org/2000/svg" class="">
+                                <path data-v-00be80db="" fill="#FFF" d="M0 10.5V.5l9 5z" fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="middlepanelitem" id="middlepanelF-S">
+                            <div class="imgicon">
+                                <img src="Imgicon.png" alt="">
+                            </div>
+                            <div class="filename">"friendship".png</div>
+                            <svg data-v-00be80db="" width="9" height="11" xmlns="http://www.w3.org/2000/svg" class="">
+                                <path data-v-00be80db="" fill="#FFF" d="M0 10.5V.5l9 5z" fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="middlepanelitem" id="middlepanelO-H">
+                            <div class="imgicon">
+                                <img src="Imgicon.png" alt="">
+                            </div>
+                            <div class="filename">OUR_HER0.png</div>
+                            <svg data-v-00be80db="" width="9" height="11" xmlns="http://www.w3.org/2000/svg" class="">
+                                <path data-v-00be80db="" fill="#FFF" d="M0 10.5V.5l9 5z" fill-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                <!--   MIDDLE FINDER POGBA -->
+                    <div class="middlepanel hidden" id="middlepanelPP">
+                        <button class="middlepanelitem">
+                            <div class="imgicon">
+                                <img src="Imgicon.png" alt="">
+                            </div>
+                            <div class="filename">Pogba_1.png</div>
+                            <svg data-v-00be80db="" width="9" height="11" xmlns="http://www.w3.org/2000/svg" class="">
+                                <path data-v-00be80db="" fill="#FFF" d="M0 10.5V.5l9 5z" fill-rule="evenodd"></path>
+                            </svg>
+                            
+                        </button>
+                    </div>
+                    <!-- RIGHT PANEL THIS CONTAINS IMAGE AND FILE NAME-->
+                    <div class="rightpanel" id="rightpanel">
+                        <div class="rightpanel-content hidden" id="rightpanel-content-HW">
+                            <div class="rightimg">
+                                <img src="Hardware .png" alt="">
+                            </div>
+                            <div class="title-filetype">
+                                <div class="filename">"Hardware"</div>
+                                <div class="filetype">PNG IMG - 592.3 kB</div>
+                            </div>
+                            <div class="file-details">
+                            <div class="file-detail">
+                                <div class="detail-key">Created</div>
+                                <div class="detail value">10/10/21 10:42 PM</div>
+                            </div>
+                            <div class="file-detail">
+                                <div class="detail-key">Modified</div>
+                                <div class="detail value">10/10/21 10:42 PM</div>
+                            </div>
+                            <div class="file-detail">
+                                <div class="detail-key">Size</div>
+                                <div class="detail value">592.3 kB</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightpanel2" id="rightpanel">
+                        <div class="rightpanel-content hidden" id="rightpanel-content-FS">
+                            <div class="rightimg">
+                                <img src="https://media.revistavanityfair.es/photos/60e84c56a5768ac18af68711/master/w_1600%2Cc_limit/38778.jpg" alt="">
+                            </div>
+                            <div class="title-filetype">
+                                <div class="filename">"friendship"</div>
+                                <div class="filetype">PNG IMG - 592.3 kB</div>
+                            </div>
+                            <div class="file-details">
+                            <div class="file-detail">
+                                <div class="detail-key">Created</div>
+                                <div class="detail value">10/10/21 10:42 PM</div>
+                            </div>
+                            <div class="file-detail">
+                                <div class="detail-key">Modified</div>
+                                <div class="detail value">10/10/21 10:42 PM</div>
+                            </div>
+                            <div class="file-detail">
+                                <div class="detail-key">Size</div>
+                                <div class="detail value">592.3 kB</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightpanel3" id="rightpanel">
+                        <div class="rightpanel-content hidden" id="rightpanel-content-OH">
+                            <div class="rightimg">
+                                <img src="https://images.squarespace-cdn.com/content/v1/58d014b2bf629abc5cb618dc/1569856841379-I4BNRILBX6ZEUR0JKA13/public.jpeg" alt="">
+                            </div>
+                            <div class="title-filetype">
+                                <div class="filename">"OUR_HER0"</div>
+                                <div class="filetype">PNG IMG - 20.92 MB</div>
+                            </div>
+                            <div class="file-details">
+                            <div class="file-detail">
+                                <div class="detail-key">Created</div>
+                                <div class="detail value">10/20/19 10:42 AM</div>
+                            </div>
+                            <div class="file-detail">
+                                <div class="detail-key">Modified</div>
+                                <div class="detail value">5/18/24 11:29 PM</div>
+                            </div>
+                            <div class="file-detail">
+                                <div class="detail-key">Size</div>
+                                <div class="detail value">20.92 MB</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
