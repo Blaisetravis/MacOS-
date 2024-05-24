@@ -99,3 +99,4 @@ document.getElementById("middlepanelO-H").addEventListener("click", function(){
         draggableButton.addEventListener('mousedown', handleMouseDown);
         document.addEventListener('mousemove', handleMouseMove);
         document.addEventListener('mouseup', handleMouseUp);
+        
