@@ -1,8 +1,6 @@
-.file-button{
+.file-button{   
+    position: absolute;
     width: 95px;
-    position: relative;
-    left: 100px;
-    top: 300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -41,6 +39,35 @@
 
 /* Folder button ends here */
 
+/* calculato rbutton starts here */
+.calculator-button{
+    width: 95px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
+.calc:active{
+    background-color: rgb(218, 218, 218);
+    border-radius: 5px;
+}
+.calc{
+    background: none;
+    border: none;
+}
+
+.calc h6{
+    margin:4px;
+    font-weight: 500;
+    font-size: 10px;
+}
+.calc>img{
+    width: 75px;
+
+}
+
 
 /* Window*/
 
@@ -49,7 +76,7 @@
     background-color: rgb(99, 126, 124);
     width: 800px;
     height: 500px;
-    left: 100px;
+    left: 1100px;
     top: 30px;
     border-radius: 5px;
     flex-direction: column;
@@ -75,12 +102,14 @@
 
 .title-bar-control {
     border-radius: 100%;
-    background-color: yellow;
+    background-color: rgb(173, 173, 173);
+    border: 1px solid rgb(30, 30, 30);
     height: 11px;
     width: 11px;
     border: none;
 
 }
+
 
 .title-bar-control.red{
     background-color: #ff5f58;
@@ -342,4 +371,80 @@ title{
     margin-top: 12px;
     border-bottom: grey .4px solid;
     height: 18px;
+}
+
+
+
+/* calculator panel */
+
+
+#Calculator{
+    position: relative;
+    background-color: #d4d4d4;
+    width: 240px;
+    border-radius: 15px;
+    max-width: 420px;
+    overflow: scroll;
+    height: 345px;
+    margin: 0;
+    overflow: hidden;
+    border: solid .5px rgba(56, 56, 56, 0.233);
+    top:240px;
+    box-shadow: 0 0 .3px 0 rgba(0, 0, 0, 0.893), 0 20px 30px 0 rgba(0, 0, 0, 0.127), 0 10px 50px 0 rgba(0, 0, 0, .2);
+    display: hidden;
+    user-select: none;
+}
+#display{
+    border: none;
+    padding: 20px;
+    width: 204px;
+    font-size: 55px;
+    text-align: right;
+    border: none;
+    background: linear-gradient(#f2f2f2, #d4d4d4);
+    height: 25px;
+    height: 55px;
+    color: #252525;
+    font-family:Helvetica, sans-serif;
+    font-weight: 100;
+    user-select: none;
+
+}
+
+#keys{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 2fr;
+    gap: 0px;
+    padding: 2px;
+    bottom: none;
+    left: -2.1px;
+}
+
+.calbutton{
+    width: 60px;
+    height: 50px;
+    background-color: #eaeaea;
+    border: .4px rgb(199, 199, 199) solid;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0px;
+    left: 10px;
+}
+#arithmetic{
+    background-color: #3578f7;
+    color: white;
+}
+
+#arithmetic:active{
+    background-color: #165fe8;
+}
+
+#zero{
+    grid-column: span 2;
+    width: calc(100% - 0px);
+}
+#CB:active{
+    background-color: #f1f1f1;
 }
