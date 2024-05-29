@@ -7,17 +7,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="file-button" id="draggable-button">
         <button class="file" id="folder">
             <img src="File .png" alt="">
             <h6>Archive</h6>
         </button>
     </div>
+    <!--Thi is for the calculator button-->
+    <div class="calculator-button" id="calculator-button">
+        <button class="calc" id="calc">
+            <img src="calc.png" alt="">
+            <h6>Calculator</h6>
+        </button>
+    </div>
+
+    <!--CALCULATOR WINDOW -->
+    <div id="Calculator">
+        <div class="title-bar-controls">
+            <button title="close window" class="title-bar-control red" id="calc-close"></button>
+            <button title="minimize window" class="title-bar-control yellow"></button>
+            <button title="maximize window" class="title-bar-control green"></button>
+            <div class="title-bar-title">Archive</div>
+        </div>
+        <input id="display" readonly>
+        <div id="keys">
+            <button onclick="clearDisplay('AC')" id="CB" class="calbutton">AC</button>
+            <button onclick="clearDisplay('+/-')" id="CB" class="calbutton">+/-</button>
+            <button onclick="appendToDisplay('%')" id="CB" class="calbutton">%</button>
+            <button onclick="appendToDisplay('/')" id="arithmetic" class="calbutton">÷</button>
+            <button onclick="appendToDisplay('7')" id="CB" class="calbutton">7</button>
+            <button onclick="appendToDisplay('8')"id="CB" class="calbutton">8</button>
+            <button onclick="appendToDisplay('9')"id="CB" class="calbutton">9</button>
+            <button onclick="appendToDisplay('*')" id="arithmetic" class="calbutton">x</button>
+            <button onclick="appendToDisplay('4')"id="CB" class="calbutton">4</button>
+            <button onclick="appendToDisplay('5')"id="CB" class="calbutton">5</button>
+            <button onclick="appendToDisplay('6')"id="CB" class="calbutton">6</button>
+            <button onclick="appendToDisplay('-')" id="arithmetic" class="calbutton">-</button>
+            <button onclick="appendToDisplay('1')"id="CB" class="calbutton">1</button>
+            <button onclick="appendToDisplay('2')"id="CB" class="calbutton">2</button>
+            <button onclick="appendToDisplay('3')"id="CB" class="calbutton">3</button>
+            <button onclick="appendToDisplay('+')" id="arithmetic" class="calbutton">+</button>
+            <button onclick="appendToDisplay('0')" id="zero" class="calbutton">0</button>
+            <button onclick="appendToDisplay('.')" class="calbutton">.</button>
+            <button onclick="calculate('=')" id="arithmetic" class="calbutton">=</button>
+        </div>
+    </div>
+
     <!-- FILE BUTTON TO OPPEN FINDER WINDOW  -->   
     <div class="window hidden" id="window">
         <div class="title-bar">
             <div class="title-bar-controls">
-                <button title="close window" class="title-bar-control red" id="close"></button>
+                <button title="close window" class="title-bar-control red" id="window-close"></button>
                 <button title="minimize window" class="title-bar-control yellow"></button>
                 <button title="maximize window" class="title-bar-control green"></button>
                 <div class="title-bar-title">Archive</div>
@@ -47,7 +88,7 @@
                         </button>
                         <button class="sidebaritem 2" id="SB2">
                             <div class="title">Paul Pogba</div>
-                            <div class="label">4</div>
+                            <div class="label">1</div>
                         </button>
                     </div>
                     
@@ -167,12 +208,35 @@
                             </div>
                         </div>
                     </div>
+                    <div class="rightpanel4" id="rightpanel">
+                        <div class="rightpanel-content hidden" id="rightpanel-content-PP">
+                            <div class="rightimg">
+                                <img src="https://e0.365dm.com/16/07/512x512/paul-pogba-coppa-italia-medal-juventus-celeb-victory_3739236.jpg" alt="">
+                            </div>
+                            <div class="title-filetype">
+                                <div class="filename">"Pogba_1"</div>
+                                <div class="filetype">PNG IMG - 50.66 MB</div>
+                            </div>
+                            <div class="file-details">
+                            <div class="file-detail">
+                                <div class="detail-key">Created</div>
+                                <div class="detail value">10/33/19 10:42 AM</div>
+                            </div>
+                            <div class="file-detail">
+                                <div class="detail-key">Modified</div>
+                                <div class="detail value">5/26/24 11:29 PM</div>
+                            </div>
+                            <div class="file-detail">
+                                <div class="detail-key">Size</div>
+                                <div class="detail value">50.66 MB</div>
+                            </div>
+                        </div>
                 </div>
             </div>
-
-
         </div>
     </div>
+    
+    <!--CALUCALTOR CALUCULATOR -->
     
     <script src="script.js"></script>
 </body>
